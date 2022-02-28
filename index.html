@@ -19,12 +19,20 @@
         <h1 class="text-center mt-5">Phone Finder</h1>
         <div class="d-flex justify-content-center my-5">
             <div class="input-group mb-3 w-25">
-                <input type="text" class="form-control" placeholder="Search Your Favorite Phone"
+                <input id="input-field" type="text" class="form-control" placeholder="Search Your Favorite Phone"
                     aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                <button onclick="loadPhoneData()" class="btn btn-outline-secondary" type="button"
+                    id="button-addon2">Search</button>
             </div>
         </div>
     </header>
+    <main>
+        <section>
+            <div id="search-result" class="row">
+
+            </div>
+        </section>
+    </main>
 
     <!-- js link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
