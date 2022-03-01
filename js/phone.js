@@ -26,7 +26,11 @@ const displayPhone = phones => {
     errorMessage.innerHTML = `<h3 class="text-center text-danger"> No result found</h3>`
   } else {
 
-    phones.forEach(phone => {
+    const showPhones = phones.slice(0, 20);
+    // console.log(showPhones);
+
+
+    showPhones.forEach(phone => {
       console.log(phone);
 
       const div = document.createElement('div')
