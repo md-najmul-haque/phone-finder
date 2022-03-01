@@ -2,26 +2,37 @@ const loadPhoneData = () => {
   const inputField = document.getElementById('input-field');
   const searchText = inputField.value;
   inputField.value = '';
+  searchResult.textContent = '';
+
+  if (searchText === '') {
+    errorMessage.innerHTML = `<h4 class="text-center text-danger fst-italic">Please search by your favorite phone name or brand name to display phone</h4>`
+    return;
+  }
 
   fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`)
     .then(res => res.json())
     .then(data => displayPhone(data.data))
 }
 
-const displayPhone = phones => {
-  const searchResult = document.getElementById('search-result')
+const errorMessage = document.getElementById('error-message')
+const searchResult = document.getElementById('search-result')
 
-  // console.log(phones)
+const displayPhone = phones => {
 
   searchResult.textContent = '';
 
-  phones.forEach(phone => {
-    // console.log(phone);
+  console.log(phones)
+  if (phones.length === 0) {
+    errorMessage.innerHTML = `<h3 class="text-center text-danger"> No result found</h3>`
+  } else {
 
-    const div = document.createElement('div')
-    div.classList.add(...['col-xl-4', 'col-lg-4', 'col-md-6', 'col-md-12', 'g-4', 'mx-auto'])
+    phones.forEach(phone => {
+      console.log(phone);
 
-    div.innerHTML = `
+      const div = document.createElement('div')
+      div.classList.add(...['col-xl-4', 'col-lg-4', 'col-md-6', 'col-md-12', 'g-4', 'mx-auto'])
+
+      div.innerHTML = `
         <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="${phone.image}" alt="phone image">
         <div class="card-body">
@@ -32,9 +43,12 @@ const displayPhone = phones => {
       </div>
         
         `
-    searchResult.appendChild(div);
+      searchResult.appendChild(div);
 
-  })
+    })
+  }
+
+
 }
 
 const loadDetails = id => {
