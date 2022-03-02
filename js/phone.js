@@ -8,7 +8,7 @@ const loadPhoneData = () => {
   viewDetails.textContent = '';
 
   if (searchText === '') {
-    errorMessage.innerHTML = `<h4 class="text-center text-danger fst-italic">Please search by your favorite phone name or brand name to display phone</h4>`
+    errorMessage.innerHTML = `<h4 class="text-center text-danger fst-italic">Please search by your favorite phone name or brand name to display the phone.</h4>`
     return;
   }
 
