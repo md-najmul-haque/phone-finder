@@ -16,29 +16,37 @@
 <body>
     <!-- header section with name and search tab -->
     <header>
-        <h1 class="text-center mt-5">Phone Finder</h1>
+        <h1 class="text-center text-info mt-5">Phone Finder</h1>
         <div class="d-flex justify-content-center my-5">
-            <div class="input-group mb-3 w-25">
-                <input id="input-field" type="text" class="form-control" placeholder="Search Your Favorite Phone"
+            <div class="input-group mb-3 input-style">
+                <input id="input-field" type="text" class="form-control" placeholder="Search your favorite phone"
                     aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button onclick="loadPhoneData()" class="btn btn-outline-secondary" type="button"
+                <button onclick="loadPhoneData()" class="btn btn-outline-info" type="button"
                     id="button-addon2">Search</button>
             </div>
         </div>
     </header>
     <main>
 
+        <section class="d-flex justify-content-center">
+            <div id="spinner" class="spinner-border text-info" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </section>
+
         <section>
-            <div id="view-details">
+
+            <div id="view-details" class="d-flex justify-content-center">
 
 
             </div>
         </section>
 
         <section>
-            <div id="search-result" class="row">
+            <div id="search-result" class="row mx-auto">
 
             </div>
+
         </section>
 
         <section>
