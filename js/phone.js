@@ -4,6 +4,7 @@ const loadPhoneData = () => {
   inputField.value = '';
   searchResult.textContent = '';
   errorMessage.textContent = '';
+  viewDetails.textContent = '';
 
   if (searchText === '') {
     errorMessage.innerHTML = `<h4 class="text-center text-danger fst-italic">Please search by your favorite phone name or brand name to display phone</h4>`
@@ -19,6 +20,7 @@ const loadPhoneData = () => {
 const spinner = document.getElementById('spinner')
 const errorMessage = document.getElementById('error-message')
 const searchResult = document.getElementById('search-result')
+const viewDetails = document.getElementById('view-details')
 
 const displayPhone = phones => {
 
@@ -69,8 +71,7 @@ const loadDetails = id => {
 }
 
 const displayDetails = phone => {
-  console.log(phone.data)
-  const viewDetails = document.getElementById('view-details')
+  // console.log(phone.data)
 
   viewDetails.textContent = '';
 
