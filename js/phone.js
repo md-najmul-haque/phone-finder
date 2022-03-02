@@ -29,8 +29,8 @@ const viewDetails = document.getElementById('view-details')
 const displayPhone = phones => {
 
   searchResult.textContent = '';
+  // console.log(phones)
 
-  console.log(phones)
   if (phones.length === 0) {
     errorMessage.innerHTML = `<h3 class="text-center text-danger"> No result found</h3>`
   } else {
