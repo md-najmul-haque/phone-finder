@@ -98,12 +98,12 @@ const displayDetails = phone => {
           <p class="card-text">Memory: ${phone.data?.mainFeatures?.memory}</p>
           <p class="card-text">Sensors: ${phone.data?.mainFeatures?.sensors[0]}, ${phone.data?.mainFeatures?.sensors[1]}, ${phone.data?.mainFeatures?.sensors[2]}, ${phone.data?.mainFeatures?.sensors[3]}, ${phone.data?.mainFeatures?.sensors[4]}, ${phone.data?.mainFeatures?.sensors[5]}</p>
           <h5>Others</h5>
-          <p class="card-text">Bluetooth: ${phone.data?.others?.Bluetooth}</p>
-          <p class="card-text">GPS: ${phone.data?.others?.GPS}</p>
-          <p class="card-text">NFC: ${phone.data?.others?.NFC}</p>
-          <p class="card-text">Radio: ${phone.data?.others?.Radio}</p>
-          <p class="card-text">USB: ${phone.data?.others?.USB}</p>
-          <p class="card-text">WLAN: ${phone.data?.others?.WLAN}</p>
+          <p class="card-text">Bluetooth: ${phone.data?.others?.Bluetooth ? phone.data?.others?.Bluetooth : "no information found"}</p>
+          <p class="card-text">GPS: ${phone.data?.others?.GPS ? phone.data?.others?.GPS : "no information found"}</p>
+          <p class="card-text">NFC: ${phone.data?.others?.NFC ? phone.data?.others?.NFC : "no information found"}</p>
+          <p class="card-text">Radio: ${phone.data?.others?.Radio ? phone.data?.others?.Radio : "no information found"}</p>
+          <p class="card-text">USB: ${phone.data?.others?.USB ? phone.data?.others?.USB : "no information found"}</p>
+          <p class="card-text">WLAN: ${phone.data?.others?.WLAN ? phone.data?.others?.WLAN : "no information found"}</p>
         </div>
       </div>
         
