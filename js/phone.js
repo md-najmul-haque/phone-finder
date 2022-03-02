@@ -46,11 +46,11 @@ const displayPhone = phones => {
 
       div.innerHTML = `
         <div class="d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 20rem;">
         <img class="card-img-top" src="${phone.image}" alt="phone image">
         <div class="card-body">
-          <h5 class="card-title">${phone.phone_name}</h5>
-          <p class="card-text">${phone.brand}</p>
+          <h5 class="card-title"><span style="font-weight: bold">Name: </span>${phone.phone_name}</h5>
+          <p class="card-text"><span style="font-weight: bold">Brand: </span>${phone.brand}</p>
           <a onclick="loadDetails('${phone.slug}')" href="#" class="btn btn-info">Details</a>
         </div>
       </div>
@@ -87,23 +87,23 @@ const displayDetails = phone => {
         <div class="card" style="width: 22rem;">
         <img class="card-img-top" src="${phone.data.image}" alt="phone image">
         <div class="card-body">
-          <h4 class="card-title">Model Name: ${phone.data.name}</h4>
-          <p class="card-text">Brand: ${phone.data.brand}</p>
+          <h4 class="card-title"><span style="font-weight: bold">Model Name: </span> ${phone.data.name}</h4>
+          <p class="card-text"><span style="font-weight: bold">Brand: </span> ${phone.data.brand}</p>
          
-          <p class="card-text">Release Date: ${phone.data.releaseDate ? phone.data.releaseDate : "No release data found"}</p>
+          <p class="card-text"><span style="font-weight: bold">Release Date: </span> ${phone.data.releaseDate ? phone.data.releaseDate : "No release data found"}</p>
           <h5>Main Feature</h5>
-          <p class="card-text">Chip Set: ${phone.data?.mainFeatures?.chipSet}</p>
-          <p class="card-text">Display Size: ${phone.data?.mainFeatures?.displaySize}}</p>
-          <p class="card-text">Storage: ${phone.data?.mainFeatures?.storage}</p>
-          <p class="card-text">Memory: ${phone.data?.mainFeatures?.memory}</p>
-          <p class="card-text">Sensors: ${phone.data?.mainFeatures?.sensors[0]}, ${phone.data?.mainFeatures?.sensors[1]}, ${phone.data?.mainFeatures?.sensors[2]}, ${phone.data?.mainFeatures?.sensors[3]}, ${phone.data?.mainFeatures?.sensors[4]}, ${phone.data?.mainFeatures?.sensors[5]}</p>
+          <p class="card-text"><span style="font-weight: bold">Chip Set: </span> ${phone.data?.mainFeatures?.chipSet}</p>
+          <p class="card-text"><span style="font-weight: bold">Display Size: </span> ${phone.data?.mainFeatures?.displaySize}}</p>
+          <p class="card-text"><span style="font-weight: bold">Storage: </span> ${phone.data?.mainFeatures?.storage}</p>
+          <p class="card-text"><span style="font-weight: bold">Memory: </span> ${phone.data?.mainFeatures?.memory}</p>
+          <p class="card-text"><span style="font-weight: bold">Sensors: </span> ${phone.data?.mainFeatures?.sensors[0]}, ${phone.data?.mainFeatures?.sensors[1]}, ${phone.data?.mainFeatures?.sensors[2]}, ${phone.data?.mainFeatures?.sensors[3]}, ${phone.data?.mainFeatures?.sensors[4]}, ${phone.data?.mainFeatures?.sensors[5]}</p>
           <h5>Others</h5>
-          <p class="card-text">Bluetooth: ${phone.data?.others?.Bluetooth ? phone.data?.others?.Bluetooth : "no information found"}</p>
-          <p class="card-text">GPS: ${phone.data?.others?.GPS ? phone.data?.others?.GPS : "no information found"}</p>
-          <p class="card-text">NFC: ${phone.data?.others?.NFC ? phone.data?.others?.NFC : "no information found"}</p>
-          <p class="card-text">Radio: ${phone.data?.others?.Radio ? phone.data?.others?.Radio : "no information found"}</p>
-          <p class="card-text">USB: ${phone.data?.others?.USB ? phone.data?.others?.USB : "no information found"}</p>
-          <p class="card-text">WLAN: ${phone.data?.others?.WLAN ? phone.data?.others?.WLAN : "no information found"}</p>
+          <p class="card-text"><span style="font-weight: bold">Bluetooth: </span> ${phone.data?.others?.Bluetooth ? phone.data?.others?.Bluetooth : "no information found"}</p>
+          <p class="card-text"><span style="font-weight: bold">GPS: </span> ${phone.data?.others?.GPS ? phone.data?.others?.GPS : "no information found"}</p>
+          <p class="card-text"><span style="font-weight: bold">NFC: </span> ${phone.data?.others?.NFC ? phone.data?.others?.NFC : "no information found"}</p>
+          <p class="card-text"><span style="font-weight: bold">Radio: </span> ${phone.data?.others?.Radio ? phone.data?.others?.Radio : "no information found"}</p>
+          <p class="card-text"><span style="font-weight: bold">USB: </span> ${phone.data?.others?.USB ? phone.data?.others?.USB : "no information found"}</p>
+          <p class="card-text"><span style="font-weight: bold">WLAN: </span> ${phone.data?.others?.WLAN ? phone.data?.others?.WLAN : "no information found"}</p>
         </div>
       </div>
         
