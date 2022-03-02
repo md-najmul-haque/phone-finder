@@ -1,3 +1,4 @@
+// Load inital data 
 const loadPhoneData = () => {
   const inputField = document.getElementById('input-field');
   const searchText = inputField.value;
@@ -12,16 +13,19 @@ const loadPhoneData = () => {
   }
 
   spinner.style.display = 'block'
+
   fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`)
     .then(res => res.json())
     .then(data => displayPhone(data.data))
 }
 
+// getting HTML element 
 const spinner = document.getElementById('spinner')
 const errorMessage = document.getElementById('error-message')
 const searchResult = document.getElementById('search-result')
 const viewDetails = document.getElementById('view-details')
 
+// display search result 
 const displayPhone = phones => {
 
   searchResult.textContent = '';
@@ -61,6 +65,7 @@ const displayPhone = phones => {
   spinner.style.display = 'none'
 }
 
+// load details of a phone
 const loadDetails = id => {
   // console.log(id)
   spinner.style.display = 'block'
@@ -70,6 +75,7 @@ const loadDetails = id => {
 
 }
 
+// display details of a phone
 const displayDetails = phone => {
   // console.log(phone.data)
 
@@ -85,7 +91,6 @@ const displayDetails = phone => {
           <p class="card-text">Brand: ${phone.data.brand}</p>
          
           <p class="card-text">Release Date: ${phone.data.releaseDate ? phone.data.releaseDate : "No release data found"}</p>
-
           <h5>Main Feature</h5>
           <p class="card-text">Chip Set: ${phone.data?.mainFeatures?.chipSet}</p>
           <p class="card-text">Display Size: ${phone.data?.mainFeatures?.displaySize}}</p>
